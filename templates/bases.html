@@ -1,0 +1,41 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GDSC Team Members Manager</title>
+  <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+  <nav>
+    <div class="nav">
+      <div class="logo"><a href="/"><img class="logo-img" src="https://res.cloudinary.com/startup-grind/image/upload/dpr_2.0,fl_sanitize/v1/gcs/platform-data-dsc/contentbuilder/logo_dark_horizontal_097s7oa.svg" alt=""></a></div>
+    </div>
+  </nav>
+
+  <div class="main-body">
+    <div class="side-bar">
+      <a href="/admindashboard">Add Member</a>
+      <a href="/update">Update Member</a>
+      <a href="/delete">Delete Member</a>
+      <a href="/register">Register a Lead</a>
+      <a href="/">Home</a>
+      <a href="/logout">Logout</a>
+    </div>
+    {% block content %}
+
+    {% endblock %}
+  </div>
+
+
+  <footer>
+    <div style="margin-right: 18px;">Copyright © Shree Ram</div>
+    <div class="socials">
+      <a href="https://github.com/mshreeram"><img class="social-img" width="128" height="128" src="https://img.icons8.com/glyph-neue/128/github.png" alt="github"/></a>
+      <a href="https://www.linkedin.com/in/shree-ram-meka-9082391b6/"><img class="social-img" width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/></a>
+    </div>
+  </footer>
+</body>
+</html>
