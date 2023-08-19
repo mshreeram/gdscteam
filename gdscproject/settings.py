@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&d!%n-bji)$d)l(sut)e+r=&=tb*lafn#1vydobjd3*%7ilev^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://*.mshreeram.in','https://*.127.0.0.1','https://*.azurewebsites.net', 'http://*.mshreeram.in','http://*.127.0.0.1','http://*.azurewebsites.net']
