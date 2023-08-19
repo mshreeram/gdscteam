@@ -23,6 +23,9 @@ def addMember(request):
     domain = request.POST['domain']
     description = request.POST['description']
     category = request.POST['category']
+    if TeamMember.objects.filter(email=email).exists():
+      messages.info(request, 'Email already in use')
+      return redirect('admindashboard')
     mem = TeamMember()
     try:
       profile_pic = request.FILES['profile_pic']
