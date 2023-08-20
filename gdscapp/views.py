@@ -116,7 +116,8 @@ def delete(request):
     return redirect('/')
   else:
     if request.user.is_authenticated:
-      return render(request, 'delete.html')
+      mems = TeamMember.objects.all()
+      return render(request, 'delete.html', {'mems': mems})
     else:
       return HttpResponse("<h1>Please Authenticate to access this page!!!</h1><a href='../login'>Login Here</a>")
     
@@ -203,6 +204,7 @@ def update(request):
       return redirect('/')
   else:
     if request.user.is_authenticated:
-      return render(request, 'update.html')
+      mems = TeamMember.objects.all()
+      return render(request, 'update.html', {'mems': mems})
     else:
       return HttpResponse("<h1>Please Authenticate to access this page!!!</h1><a href='../login'>Login Here</a>")

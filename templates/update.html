@@ -11,7 +11,11 @@
   <form action="../update/" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <div class="verify-mail">Enter the Email of the member: </div><br>
-    <input type="email" name="verifymail" placeholder="Email" required><br>
+    <select name="verifymail" >
+      {% for mem in mems %}
+        <option value="{{mem.email}}">{{mem.name}}: {{mem.email}}</option>
+      {% endfor %}
+    </select><br>
 
     <hr style="margin: 30px 0;">
 
