@@ -175,12 +175,24 @@ def update(request):
 
       try:
         profile_pic = request.FILES['profile_pic']
-        github = request.POST['github']
-        linkedin = request.POST['linkedin']
         if profile_pic != '':
+          print(profile_pic)
           mem.img = profile_pic
+          print(mem.img)
+      except:
+        pass
+
+      try:
+        github = request.POST['github']
+        print(github)
         if github != '':
           mem.github = github
+      except:
+        pass
+
+      try:
+        linkedin = request.POST['linkedin']
+        print(linkedin)
         if mem.linkedin != '':
           mem.linkedin = linkedin
       except:
