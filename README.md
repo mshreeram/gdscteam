@@ -2,5 +2,5 @@
 
 -------------
 
-<super>Username:<super> test <br>
-<super>Password:<super> SecretPassword
+<b>Username:</b> test <br>
+<b>Password:</b> SecretPassword
