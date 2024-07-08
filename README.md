@@ -1,3 +1,6 @@
 # Test Login:
-Username: test
-Password: SecretPassword
+
+-------------
+
+<bold>Username:<bold> test <br>
+<bold>Password:<bold> SecretPassword
